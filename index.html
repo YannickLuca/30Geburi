@@ -96,6 +96,45 @@
         In Google Maps öffnen
       </a>
     </section>
+    <section class="card game-card" id="boccia-game">
+      <h2>Mini-Boccia (Fun-Modus)</h2>
+      <p class="small-text">
+        Alle koennen direkt mitspielen: Richtung und Kraft waehlen, Kugel werfen und Computer schlagen.
+      </p>
+
+      <div class="boccia-meta">
+        <p>Runde <strong id="boccia-round">1</strong></p>
+        <p>Du <strong id="boccia-score-player">0</strong> : <strong id="boccia-score-cpu">0</strong> Computer</p>
+      </div>
+
+      <canvas
+        id="boccia-canvas"
+        width="860"
+        height="360"
+        role="img"
+        aria-label="Mini-Boccia Spielfeld">
+      </canvas>
+
+      <div class="boccia-controls">
+        <label for="boccia-angle">Winkel
+          <input id="boccia-angle" type="range" min="-30" max="30" value="0">
+          <output id="boccia-angle-value" for="boccia-angle">0 deg</output>
+        </label>
+
+        <label for="boccia-power">Kraft
+          <input id="boccia-power" type="range" min="35" max="100" value="70">
+          <output id="boccia-power-value" for="boccia-power">70%</output>
+        </label>
+
+        <div class="boccia-actions">
+          <button id="boccia-throw-btn" type="button">Kugel werfen</button>
+          <button id="boccia-next-round-btn" type="button" hidden>Naechste Runde</button>
+          <button id="boccia-reset-btn" type="button">Neu starten</button>
+        </div>
+      </div>
+
+      <p id="boccia-status" class="boccia-status" aria-live="polite"></p>
+    </section>
   </main>
 
   <footer>

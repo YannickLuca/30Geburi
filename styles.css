@@ -259,6 +259,106 @@ li {
   text-decoration: underline;
 }
 
+.game-card {
+  margin-top: 16px;
+}
+
+.boccia-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #22323f;
+}
+
+#boccia-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #d8e3e2;
+  background: linear-gradient(180deg, #fdf8ea 0%, #f8ead0 100%);
+  box-shadow: inset 0 0 0 1px rgba(60, 48, 36, 0.06);
+}
+
+.boccia-controls {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.boccia-controls label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #2b3440;
+}
+
+.boccia-controls input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.boccia-controls output {
+  min-width: 52px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.boccia-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.boccia-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+#boccia-throw-btn,
+#boccia-next-round-btn {
+  background: linear-gradient(125deg, #0f766e, #155e75);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.28);
+}
+
+#boccia-reset-btn {
+  background: #fff;
+  color: #334155;
+  border: 1px solid #d6dee3;
+}
+
+.boccia-actions button:hover,
+.boccia-actions button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.boccia-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.boccia-status {
+  margin: 12px 0 0;
+  color: #0f172a;
+  font-weight: 600;
+  min-height: 1.3em;
+}
+
 footer {
   text-align: center;
   color: var(--muted);
@@ -302,6 +402,15 @@ footer {
 
   .map-wrap iframe {
     min-height: 260px;
+  }
+
+  .boccia-controls label {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .boccia-controls output {
+    text-align: left;
   }
 }
 
